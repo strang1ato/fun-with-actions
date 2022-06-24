@@ -3,7 +3,7 @@
 spawn bash
 expect "my_prompt"
 sleep 1
-send "tty\r"
+send "ps -p $$ -o tty=\r"
 expect "my_prompt"
 sleep 1
 
