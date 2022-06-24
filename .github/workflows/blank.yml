@@ -31,8 +31,13 @@ jobs:
       - name: set PS1
         run: echo PS1='my_prompt' > ~/.bashrc
 
+      - name: install expect
+        run: |
+          sudo apt update
+          sudo apt install expect
+
       - name: expect
-        run: pwd && sudo pwd && sudo expect
+        run: ./expect-test
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
