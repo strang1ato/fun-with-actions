@@ -32,7 +32,7 @@ jobs:
         run: echo PS1='my_prompt' > ~/.bashrc
 
       - name: expect
-        run: sudo ./expect-test
+        run: pwd && sudo ./expect-test
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
