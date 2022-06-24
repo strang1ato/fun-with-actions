@@ -28,8 +28,11 @@ jobs:
       # - name: isntall script
       #   run: sudo apt-get update && sudo apt-get install script
 
+      - name: script
+        run: script
+
       - name: check terminal
-        run: script -e -c tty
+        run: tty
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
