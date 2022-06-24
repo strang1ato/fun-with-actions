@@ -37,7 +37,7 @@ jobs:
           sudo apt install expect
 
       - name: expect
-        run: sudo /home/runner/work/fun-with-actions/fun-with-actions/expect-test
+        run: expect ./expect-test
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
