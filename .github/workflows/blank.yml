@@ -29,7 +29,7 @@ jobs:
       #   run: sudo apt-get update && sudo apt-get install script
 
       - name: test tty
-        run: ps -p $$ -o tty= || tty
+        run: ps -p $$ -o tty= | awk -F'/' '{ print $NF }'
 
       - name: set PS1
         run: echo PS1='my_prompt' > ~/.bashrc
